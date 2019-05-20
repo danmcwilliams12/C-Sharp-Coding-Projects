@@ -1,0 +1,63 @@
+﻿<div class="container">
+    <div class="jumbotron shadow">
+        <H3 class="text-center text-primary">Get a Car Insurance Quote</H3>
+        <hr />
+        @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+        {
+            <div class="row no-gutters">
+                <div class="form-group col">
+                    <label>First Name:</label><br />
+                    <input name="FirstName" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col">
+                    <label>Last Name:</label><br />
+                    <input name="LastName" type="text" class="form-control" required />
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="form-group col">
+                    <label>Email Address:</label><br />
+                    <input name="EmailAddress" type="email" class="form-control" required />
+                </div>
+                <div class="form-group col">
+                    <label>Date of Birth:</label><br />
+                    <input name="DateOfBirth" type="date" class="form-control" required />
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="form-group col">
+                    <label>Year:</label><br />
+                    <input name="Year" type="number" class="form-control" required />
+                </div>
+                <div class="form-group col">
+                    <label>Make:</label><br />
+                    <input name="Make" type="text" class="form-control" required />
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="form-group col">
+                    <label>Model</label><br />
+                    <input name="Model" type="text" class="form-control" required />
+                </div>
+                <div class="form-group col">
+                    <label>Number of Speeding Tickets:</label><br />
+                    <input name="SpeedingTickets" type="number" class="form-control" required />
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class=" form-group col">
+                    <label>What type of coverage would you like?</label><br />
+                    <input name="CoverageType" type="radio" value="Full" checked />Full<br />
+                    <input name="CoverageType" type="radio" value="Liability" />Liability
+                </div>
+                <div class="form-group col">
+                    <label>Have You ever had a DUI?</label><br />
+                    <input name="DUI" type="radio" value="No" checked /> No<br />
+                    <input name="DUI" type="radio" value="Yes" /> Yes
+                </div>
+            </div>
+            <button type="submit" class="btn btn-block btn-success w-50 mx-auto">Get Quote</button>
+        }
+
+    </div>    
+</div>
