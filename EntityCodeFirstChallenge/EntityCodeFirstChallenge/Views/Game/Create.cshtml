@@ -1,0 +1,96 @@
+﻿@model EntityCodeFirstChallenge.Models.Game
+
+@{
+    ViewBag.Title = "Create";
+}
+<div class="container">
+    <div class="jumbotron shadow">
+        <h1 class="text-center text-info">Add Game to Collection</h1>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()            
+            <hr />
+            <div class="row mx-auto">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.Designer, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Designer, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Designer, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.PlayTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.PlayTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PlayTime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.CoreMechanic, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.CoreMechanic, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CoreMechanic, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>                   
+            <div class="row mx-auto">
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.MinPlayers, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.MinPlayers, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MinPlayers, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.MaxPlayers, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.MaxPlayers, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MaxPlayers, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group col">
+                    @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="">
+                        @Html.EditorFor(model => model.Rating, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>    
+                    
+            <button type="submit" class="btn btn-block btn-danger w-25 my-4 mx-auto">Add Game</button>
+            <div class="text-center mt-3">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

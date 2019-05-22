@@ -1,0 +1,81 @@
+﻿@model IEnumerable<EntityCodeFirstChallenge.Models.Game>
+
+@{
+ViewBag.Title = "Index";
+}
+<body class="bg-secondary">
+    <div class="container-fluid">
+        <h2 class="text-center text-info">Game Collection</h2>
+        <table class="table table-dark shadow mb-0">
+            <tr class="thead-light">
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Designer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlayTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CoreMechanic)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MinPlayers)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxPlayers)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Designer)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlayTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CoreMechanic)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MinPlayers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaxPlayers)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Weight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rating)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </table>
+        <button class="btn btn-block btn-light mt-0">
+            @Html.ActionLink("Create New", "Create")
+        </button>
+    </div>
+</body>
+
+
+
+

@@ -1,0 +1,98 @@
+﻿@model EntityCodeFirstChallenge.Models.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+    <div class="container">
+        <div class="jumbotron shadow">
+            <h1 class="text-center text-info">Details</h1>
+            <hr />
+            <div class="row">
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                </dl>
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Designer)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Designer)
+                    </dd>
+                </dl>
+            </div>
+            <div class="row">
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PlayTime)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.PlayTime)
+                    </dd>
+                </dl>
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CoreMechanic)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CoreMechanic)
+                    </dd>
+                </dl>
+            </div>
+            <div class="row">
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MinPlayers)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MinPlayers)
+                    </dd>
+                </dl>
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MaxPlayers)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MaxPlayers)
+                    </dd>
+                </dl>
+            </div>
+            <div class="row">
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Weight)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Weight)
+                    </dd>
+                </dl>
+                <dl class="col">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Rating)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Rating)
+                    </dd>
+                </dl>
+            </div>
+
+            <p class="text-center mt-3">
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+</div>
+
+
+
